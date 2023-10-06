@@ -5,10 +5,8 @@ const app = getApp()
 Page({
   data: {
     userInfo: {},
-    characterOption:[{ label: '小狐狸', value: '1' },
-    { label: '小熊猫', value: '2' },
-    { label: '小猫咪', value: '3' },
-    { label: '小兔子', value: '4' }],
+    characterOption:[{ label: '小女孩', value: '1' },
+    { label: '小男孩', value: '2' }],
     characterText:'',
     characterValue:'',
     readTime:'',
