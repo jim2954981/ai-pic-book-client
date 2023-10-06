@@ -1,14 +1,33 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/work/work",
+    "pages/list/list"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
-  "style": "v2",
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/createFocous.png",
+        "iconPath": "images/createUnFocous.png",
+        "pagePath": "pages/index/index",
+        "text": "创作绘本"
+      },
+      {
+        "selectedIconPath": "images/workFocous.png",
+        "iconPath": "images/workUnfocous.png",
+        "pagePath": "pages/list/list",
+        "text": "我的绘本"
+      }
+    ]
+  },
   "sitemapLocation": "sitemap.json"
 }

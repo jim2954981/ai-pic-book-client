@@ -1,23 +1,18 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<form bindsubmit="onsubmit">
+  <view>
+    <t-input name="title" label="绘本名称"  placeholder="请输入绘本故事名称"></t-input>
+    <t-input name="abstract" label="绘本内容"  placeholder="请输入绘本故事梗概"></t-input>
+    <t-input name="age" label="孩子年龄" placeholder="0" suffix="岁" type="number" align="right"  bindchange="onAgeInput" tips="{{ageError ? '请输入正确的年龄' : ''}}" t-class-tips="tips" />
+    <t-cell class="mb-16" title="选择主角" arrow hover note="{{characterText}}" bind:click="onCharacterPicker" />
+    <t-picker name="characterCode" visible="{{characterVisible}}" value="{{characterValue}}" data-key="character" title="选择主角" cancelBtn="取消" confirmBtn="确认" bindchange="onPickerChange">
+      <t-picker-item options="{{characterOption}}" />
+    </t-picker>
+    <view class="demo-desc" style="position: relative; left: 26rpx; top: 12rpx;font-size:small;">阅读时间（分钟）</view>
+    <t-slider name="readTime" marks="{{marks}}" step="{{34}}" default="{{0}}" theme="capsule" bind:change="onSliderChange"/>
+    <view class="button-example">
+      <t-button theme="primary" size="large" type="submit" block>创建绘本</t-button>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view>
+</form>
+<t-toast id="t-toast" />

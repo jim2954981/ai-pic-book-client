@@ -1,0 +1,11 @@
+<!--components/slidecard.wxml-->
+<view class="custom-slider">
+  <image src="{{imageList[currentIndex - 1].imageUrl}}" class="slider-image"></image>
+  <view class="slider-text">{{imageList[currentIndex - 1].text}}</view>
+  <view class="slider-buttons">
+    <t-icon class="slider-button" name="caret-left" size="48rpx" bind:tap="handlePrev"/>
+    <view class="page-info">{{currentIndex}} / {{imageList.length}}</view>
+    <t-icon class="slider-button" name="caret-right" size="48rpx" bind:tap="handleNext"/>
+    </view>
+  </view>
+  

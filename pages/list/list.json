@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "t-empty": "/miniprogram_npm/tdesign-miniprogram/empty/empty",
+    "card": "/components/listcard/listcard",
+    "t-toast": "/miniprogram_npm/tdesign-miniprogram/toast/toast"
+  }
+}

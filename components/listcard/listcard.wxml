@@ -1,0 +1,13 @@
+<view class="card" bindtap="onCardTap" data-id="{{cardId}}">
+  <image class="card-image" src="{{imageSrc}}"></image>
+  <view class="card-text">
+    <view class="card-title-row">
+      <text class="card-title-label">标题：</text>
+      <text class="card-title">{{title}}</text>
+    </view>
+    <view class="card-time-row">
+      <text class="card-time-label">创作时间：</text>
+      <text class="card-time">{{time}}</text>
+    </view>
+  </view>
+</view>
