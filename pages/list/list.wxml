@@ -1,0 +1,18 @@
+<!--pages/list/list.wxml-->
+<view>
+  <block wx:if="{{workList.length}}">
+  <card
+    wx:for="{{workList}}"
+    wx:key="index"
+    imageSrc="{{item.imageSrc}}"
+    title="{{item.title}}"
+    time="{{item.time}}"
+    cardId="{{item.id}}"
+    bind:cardTap="onCardTap"
+  ></card>
+</block>
+<block wx:else>
+  <t-empty icon="info-circle-filled" description="{{emptyDes}}"/>
+</block>
+</view>
+<t-toast id="t-toast" />

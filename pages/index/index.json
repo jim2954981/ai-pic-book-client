@@ -1,3 +1,14 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "t-input": "tdesign-miniprogram/input/input",
+    "t-row": "tdesign-miniprogram/row/row",
+    "t-col": "tdesign-miniprogram/col/col",
+    "t-cell": "tdesign-miniprogram/cell/cell",
+    "t-picker": "/miniprogram_npm/tdesign-miniprogram/picker/picker",
+    "t-picker-item": "/miniprogram_npm/tdesign-miniprogram/picker-item/picker-item",
+    "t-slider": "tdesign-miniprogram/slider/slider",
+    "t-button": "tdesign-miniprogram/button/button",
+    "t-radio": "/miniprogram_npm/tdesign-miniprogram/radio/radio",
+    "t-toast": "/miniprogram_npm/tdesign-miniprogram/toast/toast"
+  }
 }

@@ -1,0 +1,7 @@
+<!--pages/work.wxml-->
+<view class="container">
+  <custom-slider 
+    imageList="{{workList}}"
+  ></custom-slider>
+</view>
+
